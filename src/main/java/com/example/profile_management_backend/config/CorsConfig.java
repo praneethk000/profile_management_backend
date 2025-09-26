@@ -13,8 +13,8 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**") // Apply to all endpoints
-                        .allowedOrigins("https://profile-management-frontend-rvjo.vercel.app/")
-                        .allowedOrigins("http://localhost:3000")// Allow specific frontend origin
+                        .allowedOrigins("https://profile-management-frontend-rvjo.vercel.app",
+                        "http://localhost:3000")// Allow specific frontend origin
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Allowed HTTP methods
                         .allowedHeaders("*") // Allow all headers
                         .allowCredentials(true); // Allow cookies/auth headers if needed
